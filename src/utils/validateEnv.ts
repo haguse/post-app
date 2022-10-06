@@ -8,7 +8,7 @@ const validateEnv = (): void => {
 		MONGO_PASSWORD: str(),
 		MONGO_PATH: str(),
 		MONGO_USER: str(),
-		PORT: port({default: 5000})
+		PORT: port({ default: 5000 })
 	});
 };
 
