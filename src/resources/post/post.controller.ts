@@ -18,7 +18,7 @@ class PostController implements Controller {
 		this.router.post(
 			`${this.path}`,
 			validationMiddleware(validate.create),
-			this.create
+			this.create,
 		);
 	}
 
@@ -31,8 +31,8 @@ class PostController implements Controller {
 			const { title, body } = req.body;
 			const post = await this.PostService.create(title, body);
 			res.status(201).json({ post });
-		} catch (e) {
-			next(new HttpException(400, 'Cannot create post'));
+		} catch (e: any) {
+			next(new HttpException(400, e.message));
 		}
 	};
 }
