@@ -22,7 +22,7 @@ class App {
 	}
 
 	private initializeMiddleware(): void {
-		this.express.use(helmet);
+		this.express.use(helmet());
 		this.express.use(cors());
 		this.express.use(morgan('dev'));
 		this.express.use(express.json());
