@@ -16,6 +16,7 @@ git clone https://github.com/haguse/post-app.git
 #### Installation
 
 _Make sure MongoDB service is running._
+<br>
 _Make sure you create your .env file. (You can check the .env.example file)_
 
 ```sh
